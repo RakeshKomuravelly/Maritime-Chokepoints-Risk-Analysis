@@ -96,3 +96,54 @@ The project culminates in a live, interactive dashboard built with **Dash** and 
 
 ![Dasboard](plots/dashboard1.jpeg)
 ![Dasboard](plots/dashboard2.jpeg)
+
+
+## Running the Project
+
+Follow these steps to set up the environment and launch the Maritime Vulnerability Dashboard.
+
+### 1. Clone the Repository
+
+First, clone the project repository to your local machine using Git.
+
+```bash
+git clone https://github.com/RakeshKomuravelly/Maritime-Chokepoints-Risk-Analysis.git
+```
+
+### 2. Create Environment & Install Dependencies
+
+Use a virtual environment to manage project dependencies.
+
+```bash
+# Create a virtual environment
+python -m venv venv
+
+# Activate the environment
+# On Windows:
+venv\Scripts\activate
+# On macOS/Linux:
+source venv/bin/activate
+
+# Install the required packages
+pip install -r requirements.txt
+```
+
+### 3. Run the Data Processing Pipelines
+
+The dashboard requires the processed data files and trained models. You must run the Jupyter notebooks in sequential order to generate these assets.
+
+**Important:** Run notebooks `01` through `06` in order. Each notebook generates output files that the next one depends on.
+
+*Note: The GDELT and Weather data pipelines may take a significant amount of time to download all the required data.*
+
+### 4. Launch the Interactive Dashboard
+
+Once the pipelines have been executed successfully, you can start the Dash application.
+
+```bash
+python dashboard.py
+```
+
+After running the command, open your web browser and navigate to the following address to view the dashboard:
+
+[**http://127.0.0.1:8050/**](http://127.0.0.1:8050/)
